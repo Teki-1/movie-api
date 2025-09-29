@@ -1,16 +1,44 @@
-# React + Vite
+# 🎬 Movie Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based movie search app powered by the [TMDB API](https://www.themoviedb.org/documentation/api).  
+Users can browse popular movies or search by title with debounced input for smoother performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔍 **Search Movies** — type a title and get results from TMDB.
+- ⏳ **Debounced Search** — API requests only fire after the user stops typing.
+- ⭐ **Movie Ratings** — displays the average rating (from `vote_average`).
+- 🗓️ **Release Year** — shows the release year extracted from `release_date`.
+- 🖼️ **Movie Posters** — fetches poster images, with a fallback if missing.
+- 🔄 **Loading Spinner** — visual feedback while fetching data.
+- ⚠️ **Error Handling** — friendly messages when something goes wrong.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/) (Vite setup)
+- [react-use](https://github.com/streamich/react-use) for debouncing
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [TMDB API](https://developer.themoviedb.org/docs)
+
+---
+
+## 📂 Project Structure
+
+src/
+├── components/
+│ ├── MovieCard.jsx # Single movie display card
+│ ├── Search.jsx # Search bar component
+│ └── Spinner.jsx # Loading spinner
+├── App.jsx # Main app logic
+└── main.jsx # Entry point
+
+## 🖼️ Screenshots
+
+Here is a preview of the top banenr
+![Homepage Screenshot](public/hero-banner.png)
+Here is a preview of movie cards listed
+![Movie Cards Screenshot](public/movie-list.png)
